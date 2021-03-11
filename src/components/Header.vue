@@ -14,7 +14,7 @@
 <style scoped>
 #title {
   text-align:center;
-  background-color:rgb(52, 136, 247);
+  background-color:orange;
   color:white;
   padding:30px;
   margin:0px;
