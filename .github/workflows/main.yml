@@ -1,0 +1,17 @@
+name: Show secret
+on: [push]
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up secret file
+      env:
+        DEBUG_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_GITHUB_ACTIONS_207CC }}
+      run: |
+        echo $DEBUG_KEY >> secrets.txt
